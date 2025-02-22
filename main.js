@@ -69,19 +69,28 @@ const footballTeams = [
 
 // funzione per generare numeri interi random per point e fall (Math.floor(Math.random()
 
-function randomNumberGenerator(teamArr){
+function randomNumberGenerator(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 
 //funzione con ciclo for per assegnare i numeri generati ai FootballTeam
+function randomNumberForPoinAndFall (teamArr){ 
+ for (let i = 0; i < teamArr.length; i++){
+    teamArr[i].point = randomNumberGenerator(1, 10);
+    teamArr[i].fall = randomNumberGenerator(1, 10);
+    console.log(teamArr[i])
+ }
+ return teamArr;
+}
 
 
 
 
 //stampare in console l'array football Teams con i punti e i falli aggiornati
 
-
+const updateDataFootbalTeams = randomNumberForPoinAndFall(footballTeams)
+console.log(updateDataFootbalTeams)
 
 
 
