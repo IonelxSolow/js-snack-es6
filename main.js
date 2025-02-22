@@ -3,6 +3,43 @@
 Stampare a schermo la bici con peso minore. */
 
 
+// creare un array di oggetti
+
+const bikes = [
+    {
+        bikeName: "Pinco",
+        weight: 33
+    },
+    {
+        bikeName: "Pallino",
+        weight: 12
+    },
+    {
+        bikeName: "Palla",
+        weight: 14
+    }
+]
+//Crea funzione con ciclo for per trovare la bici piu leggera
+function findLighterBike (bikesArr) {
+    let lighterBike = bikesArr[0];
+    for (let i = 0; i < bikesArr.length; i++){
+        if (bikesArr[i].weight < lighterBike.weight){
+            lighterBike = bikesArr[i]
+        }
+    }
+    
+    return lighterBike  
+  
+}
+
+const lighterBike = findLighterBike(bikes);
+console.log("The ligher bike name is:", lighterBike)
+
+
+
+
+
+
 
 //Snack2
 /* Creare un array di oggetti di squadre di calcio.
