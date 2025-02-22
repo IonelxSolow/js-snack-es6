@@ -99,3 +99,16 @@ console.log(updateDataFootbalTeams)
 
 
 /* infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console. */
+
+
+//estrare i nome e i falli e inserirli in un nuovo array da stampare in console
+
+function extractNameAndFall (teamArr){
+    let nameAndFall = [];
+    for (let i = 0; i < teamArr.length; i++){
+        nameAndFall.push({name: teamArr[i].name, fall: teamArr[i].fall})
+    } return nameAndFall
+};
+
+const teamsNameAndFall = extractNameAndFall(footballTeams);
+console.log(teamsNameAndFall)
